@@ -25,13 +25,13 @@ const Home = () => {
 				<div className='flex items-center justify-center w-full gap-4 lg:justify-start'>
 					<Link
 						href='/portfolio'
-						className='p-4 text-white duration-300 bg-black border border-black rounded-lg hover:bg-transparent hover:text-black'
+						className='p-3 font-semibold text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500'
 					>
 						View My Work
 					</Link>
 					<Link
 						href='/contact'
-						className='p-4 duration-300 border border-black rounded-lg hover:bg-black hover:text-white'
+						className='p-3 font-semibold duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500'
 					>
 						Contact Me
 					</Link>

@@ -17,19 +17,19 @@ const socials = [
 		url: 'https://github.com/jackal7819',
 		icon: FaSquareGithub,
 		color: 'text-black',
-		hover: 'hover:text-slate-600',
+		hover: 'hover:text-amber-500',
 	},
 	{
 		url: 'https://t.me/jackal3156',
 		icon: FaTelegram,
 		color: 'text-blue-500',
-		hover: 'hover:text-blue-700',
+		hover: 'hover:text-amber-500',
 	},
 	{
 		url: 'https://www.linkedin.com/in/viktor-filippov-51a259241/',
 		icon: FaLinkedin,
 		color: 'text-blue-700',
-		hover: 'hover:text-blue-500',
+		hover: 'hover:text-amber-500',
 	},
 ];
 
@@ -44,7 +44,7 @@ const Navbar = () => {
 					<Link
 						key={link.title}
 						href={link.url}
-						className={`rounded-md px-2 py-1 duration-300 ${
+						className={`rounded-md px-2 py-1 duration-300 hover:text-amber-500 ${
 							pathname === link.url && 'bg-black text-white'
 						}`}
 					>
@@ -55,10 +55,12 @@ const Navbar = () => {
 			<div className='md:hidden lg:flex'>
 				<Link
 					href='/'
-					className='flex items-center justify-center p-1 text-xl font-semibold bg-black rounded-md'
+					className='flex items-center justify-center p-1 text-xl font-semibold duration-300 bg-black rounded-md group hover:bg-amber-500'
 				>
-					<span className='ml-1 mr-2 text-white'>ViK</span>
-					<span className='flex items-center justify-center w-10 h-8 text-black bg-white rounded'>
+					<span className='ml-1 mr-2 text-white duration-300 group-hover:text-white'>
+						ViK
+					</span>
+					<span className='flex items-center justify-center w-10 h-8 text-black duration-300 bg-white rounded group-hover:text-amber-500'>
 						Tor
 					</span>
 				</Link>
@@ -82,12 +84,16 @@ const Navbar = () => {
 							open ? 'bg-white' : 'bg-black'
 						}`}
 					></div>
-					<div className={`w-10 h-1 rounded ${
+					<div
+						className={`w-10 h-1 rounded ${
 							open ? 'bg-white' : 'bg-black'
-						}`}></div>
-					<div className={`w-10 h-1 rounded ${
+						}`}
+					></div>
+					<div
+						className={`w-10 h-1 rounded ${
 							open ? 'bg-white' : 'bg-black'
-						}`}></div>
+						}`}
+					></div>
 				</button>
 				{open && (
 					<div className='absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'>
