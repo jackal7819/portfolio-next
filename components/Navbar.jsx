@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaLinkedin, FaSquareGithub, FaTelegram } from 'react-icons/fa6';
 import { usePathname } from 'next/navigation';
@@ -36,6 +37,59 @@ const socials = [
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	const pathname = usePathname();
+
+	const topVariants = {
+		closed: {
+			rotate: 0,
+		},
+		opened: {
+			rotate: 45,
+			backgroundColor: '#fff',
+		},
+	};
+
+	const centerVariants = {
+		closed: {
+			opacity: 1,
+		},
+		opened: {
+			opacity: 0,
+		},
+	};
+
+	const bottomVariants = {
+		closed: {
+			rotate: 0,
+		},
+		opened: {
+			rotate: -45,
+			backgroundColor: '#fff',
+		},
+	};
+
+	const listVariants = {
+		closed: {
+			x: '100vw',
+		},
+		opened: {
+			x: 0,
+			transition: {
+				when: 'beforeChildren',
+				staggerChildren: 0.2,
+			}
+		},
+	};
+
+	const listItemVariants = {
+		closed: {
+			x: -50,
+			opacity: 0,
+		},
+		opened: {
+			x: 0,
+			opacity: 1,
+		},
+	};
 
 	return (
 		<div className='flex items-center justify-between h-full'>
@@ -76,33 +130,47 @@ const Navbar = () => {
 			</div>
 			<div className='md:hidden'>
 				<button
-					className='relative z-50 flex flex-col justify-between w-10 h-7'
+					className='relative z-50 flex flex-col justify-between w-10 h-8'
 					onClick={() => setOpen((prev) => !prev)}
 				>
-					<div
-						className={`w-10 h-1 rounded ${
-							open ? 'bg-white' : 'bg-black'
-						}`}
-					></div>
-					<div
-						className={`w-10 h-1 rounded ${
-							open ? 'bg-white' : 'bg-black'
-						}`}
-					></div>
-					<div
-						className={`w-10 h-1 rounded ${
-							open ? 'bg-white' : 'bg-black'
-						}`}
-					></div>
+					<motion.div
+						variants={topVariants}
+						animate={open ? 'opened' : 'closed'}
+						// transition={{ duration: 0.3 }}
+						className='w-10 h-1 origin-left bg-black rounded'
+					></motion.div>
+					<motion.div
+						variants={centerVariants}
+						animate={open ? 'opened' : 'closed'}
+						// transition={{ duration: 0.3 }}
+						className='w-10 h-1 bg-black rounded'
+					></motion.div>
+					<motion.div
+						variants={bottomVariants}
+						animate={open ? 'opened' : 'closed'}
+						// transition={{ duration: 0.3 }}
+						className='w-10 h-1 origin-left bg-black rounded'
+					></motion.div>
 				</button>
 				{open && (
-					<div className='absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'>
+					<motion.div
+						variants={listVariants}
+						initial='closed'
+						animate='opened'
+						// transition={{ delay: 0.3, duration: 0.3 }}
+						className='absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'
+					>
 						{links.map((link) => (
-							<Link key={link.title} href={link.url}>
-								{link.title}
-							</Link>
+							<motion.div
+								variants={listItemVariants}
+								// initial='closed'
+								// animate='opened'
+								key={link.title}
+							>
+								<Link href={link.url}>{link.title}</Link>
+							</motion.div>
 						))}
-					</div>
+					</motion.div>
 				)}
 			</div>
 		</div>
