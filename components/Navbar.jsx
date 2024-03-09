@@ -76,7 +76,7 @@ const Navbar = () => {
 			transition: {
 				when: 'beforeChildren',
 				staggerChildren: 0.2,
-			}
+			},
 		},
 	};
 
@@ -136,19 +136,16 @@ const Navbar = () => {
 					<motion.div
 						variants={topVariants}
 						animate={open ? 'opened' : 'closed'}
-						// transition={{ duration: 0.3 }}
 						className='w-10 h-1 origin-left bg-black rounded'
 					></motion.div>
 					<motion.div
 						variants={centerVariants}
 						animate={open ? 'opened' : 'closed'}
-						// transition={{ duration: 0.3 }}
 						className='w-10 h-1 bg-black rounded'
 					></motion.div>
 					<motion.div
 						variants={bottomVariants}
 						animate={open ? 'opened' : 'closed'}
-						// transition={{ duration: 0.3 }}
 						className='w-10 h-1 origin-left bg-black rounded'
 					></motion.div>
 				</button>
@@ -157,14 +154,11 @@ const Navbar = () => {
 						variants={listVariants}
 						initial='closed'
 						animate='opened'
-						// transition={{ delay: 0.3, duration: 0.3 }}
 						className='absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'
 					>
 						{links.map((link) => (
 							<motion.div
 								variants={listItemVariants}
-								// initial='closed'
-								// animate='opened'
 								key={link.title}
 							>
 								<Link href={link.url}>{link.title}</Link>
