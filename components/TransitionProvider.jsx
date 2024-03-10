@@ -36,7 +36,7 @@ const TransitionProvider = ({ children }) => {
 				<div className='h-24 px-[5%] max-w-[1920px] mx-auto'>
 					<Navbar />
 				</div>
-				<div className='h-[calc(100vh-6rem)] px-[5%] max-w-[1920px] mx-auto'>
+				<div>
 					{children}
 				</div>
 			</div>

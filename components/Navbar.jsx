@@ -93,6 +93,7 @@ const Navbar = () => {
 
 	return (
 		<div className='flex items-center justify-between h-full'>
+			{/* LINKS */}
 			<div className='hidden gap-5 md:flex'>
 				{links.map((link) => (
 					<Link
@@ -106,6 +107,7 @@ const Navbar = () => {
 					</Link>
 				))}
 			</div>
+			{/* LOGO */}
 			<div className='md:hidden lg:flex'>
 				<Link
 					href='/'
@@ -119,6 +121,7 @@ const Navbar = () => {
 					</span>
 				</Link>
 			</div>
+			{/* SOCIALS */}
 			<div className='items-center hidden gap-5 md:flex'>
 				{socials.map((social) => (
 					<Link key={social.icon} href={social.url}>
@@ -128,7 +131,9 @@ const Navbar = () => {
 					</Link>
 				))}
 			</div>
+			{/* MOBILE MENU */}
 			<div className='md:hidden'>
+				{/* HAMBURGER */}
 				<button
 					className='relative z-50 flex flex-col justify-between w-10 h-8'
 					onClick={() => setOpen((prev) => !prev)}
@@ -149,12 +154,13 @@ const Navbar = () => {
 						className='w-10 h-1 origin-left bg-black rounded'
 					></motion.div>
 				</button>
+				{/* MOBILE LINKS */}
 				{open && (
 					<motion.div
 						variants={listVariants}
 						initial='closed'
 						animate='opened'
-						className='absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'
+						className='absolute top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'
 					>
 						{links.map((link) => (
 							<motion.div
