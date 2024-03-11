@@ -1,7 +1,9 @@
 'use client';
 
+import Brain from '@/components/Brain';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
+import { useRef } from 'react';
 
 const skills = [
 	{ id: 1, name: 'JavaScript' },
@@ -17,21 +19,25 @@ const skills = [
 	{ id: 11, name: 'Tailwind' },
 	{ id: 12, name: 'Bootstrap' },
 	{ id: 13, name: 'Material UI' },
-	{ id: 14, name: 'Styled Components' },
-	{ id: 15, name: 'Git' },
-	{ id: 16, name: 'GitHub' },
-	{ id: 17, name: 'Rest API' },
-	{ id: 18, name: 'GraphQL' },
-	{ id: 19, name: 'Apollo' },
-	{ id: 20, name: 'Redux Toolkit' },
-	{ id: 21, name: 'Zustand' },
-	{ id: 22, name: 'Pinia' },
-	{ id: 23, name: 'Framer Motion' },
-	{ id: 24, name: 'Firebase' },
-	{ id: 25, name: 'Vite' },
+	{ id: 14, name: 'Git' },
+	{ id: 15, name: 'GitHub' },
+	{ id: 16, name: 'Rest API' },
+	{ id: 17, name: 'GraphQL' },
+	{ id: 18, name: 'Apollo' },
+	{ id: 19, name: 'Redux Toolkit' },
+	{ id: 20, name: 'Zustand' },
+	{ id: 21, name: 'Pinia' },
+	{ id: 22, name: 'Framer Motion' },
+	{ id: 23, name: 'Firebase' },
+	{ id: 24, name: 'Vite' },
 ];
 
 const AboutPage = () => {
+	const containerRef = useRef();
+	const { scrollYProgress } = useScroll({
+		container: containerRef,
+	});
+
 	return (
 		<motion.div
 			className='h-full'
@@ -40,9 +46,12 @@ const AboutPage = () => {
 			transition={{ duration: 1 }}
 		>
 			{/* CONTAINER */}
-			<div className='h-full overflow-scroll lg:flex'>
+			<div
+				className='h-full overflow-y-scroll lg:flex'
+				ref={containerRef}
+			>
 				{/* TEXT CONTAINER */}
-				<div className='flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 px-[5vw] xl:w-1/2 lg:w-2/3'>
+				<div className='flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 p-[5vw] xl:w-1/2 lg:w-2/3'>
 					{/* BIOGRAPHY CONTAINER */}
 					<div className='flex flex-col justify-center gap-12'>
 						{/* BIOGRAPHY TITLE */}
@@ -125,7 +134,7 @@ const AboutPage = () => {
 						{/* SKILLS TITLE */}
 						<h1 className='text-2xl font-bold uppercase'>Skills</h1>
 						{/* SKILLS LIST */}
-						<div className='grid grid-cols-5 gap-4 auto-rows-fr'>
+						<div className='grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 2xl:grid-cols-5 auto-rows-fr'>
 							{skills.map((skill) => (
 								<div
 									key={skill.id}
@@ -260,7 +269,9 @@ const AboutPage = () => {
 					</div>
 				</div>
 				{/* SVG CONTAINER */}
-				<div className='hidden w-1/3 xl:w-1/2 lg:block'></div>
+				<div className='sticky top-0 z-30 hidden w-1/3 xl:w-1/2 lg:block'>
+					<Brain scrollYProgress={scrollYProgress} />
+				</div>
 			</div>
 		</motion.div>
 	);
