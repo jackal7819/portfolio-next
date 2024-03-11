@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const skills = [
 	{ id: 1, name: 'JavaScript' },
@@ -15,17 +15,20 @@ const skills = [
 	{ id: 9, name: 'CSS' },
 	{ id: 10, name: 'SCSS' },
 	{ id: 11, name: 'Tailwind' },
-	{ id: 12, name: 'Styled Components' },
-	{ id: 13, name: 'Git' },
-	{ id: 14, name: 'GitHub' },
-	{ id: 15, name: 'Rest API' },
-	{ id: 16, name: 'GraphQL' },
-	{ id: 17, name: 'Apollo' },
-	{ id: 18, name: 'Tanstack Query' },
-	{ id: 19, name: 'Redux Toolkit' },
-	{ id: 20, name: 'Pinia' },
-	{ id: 21, name: 'Framer Motion' },
-	{ id: 22, name: 'Vite' },
+	{ id: 12, name: 'Bootstrap' },
+	{ id: 13, name: 'Material UI' },
+	{ id: 14, name: 'Styled Components' },
+	{ id: 15, name: 'Git' },
+	{ id: 16, name: 'GitHub' },
+	{ id: 17, name: 'Rest API' },
+	{ id: 18, name: 'GraphQL' },
+	{ id: 19, name: 'Apollo' },
+	{ id: 20, name: 'Redux Toolkit' },
+	{ id: 21, name: 'Zustand' },
+	{ id: 22, name: 'Pinia' },
+	{ id: 23, name: 'Framer Motion' },
+	{ id: 24, name: 'Firebase' },
+	{ id: 25, name: 'Vite' },
 ];
 
 const AboutPage = () => {
@@ -37,9 +40,9 @@ const AboutPage = () => {
 			transition={{ duration: 1 }}
 		>
 			{/* CONTAINER */}
-			<div className='h-full lg:flex'>
+			<div className='h-full overflow-scroll lg:flex'>
 				{/* TEXT CONTAINER */}
-				<div className='flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 px-[5%] xl:w-1/2 lg:w-2/3'>
+				<div className='flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:pr-0 px-[5vw] xl:w-1/2 lg:w-2/3'>
 					{/* BIOGRAPHY CONTAINER */}
 					<div className='flex flex-col justify-center gap-12'>
 						{/* BIOGRAPHY TITLE */}
@@ -122,9 +125,12 @@ const AboutPage = () => {
 						{/* SKILLS TITLE */}
 						<h1 className='text-2xl font-bold uppercase'>Skills</h1>
 						{/* SKILLS LIST */}
-						<div className='grid grid-cols-2 gap-4'>
+						<div className='grid grid-cols-5 gap-4 auto-rows-fr'>
 							{skills.map((skill) => (
-								<div key={skill.id} className='p-2 text-sm text-center text-white duration-300 bg-black rounded cursor-pointer hover:bg-amber-500 hover:text-white'>
+								<div
+									key={skill.id}
+									className='flex items-center justify-center p-2 text-sm text-center text-white duration-300 bg-black rounded cursor-pointer hover:bg-amber-500'
+								>
 									{skill.name}
 								</div>
 							))}
@@ -162,10 +168,99 @@ const AboutPage = () => {
 						</motion.svg>
 					</div>
 					{/* EXPERIENCE CONTAINER */}
-					<div className=''></div>
+					<div className='flex flex-col justify-center gap-12 pb-48'>
+						{/* EXPERIENCE TITLE */}
+						<h1 className='text-2xl font-bold uppercase'>
+							Experience
+						</h1>
+						{/* EXPERIENCE LIST */}
+						<div>
+							{/* EXPERIENCE LIST ITEM*/}
+							<div>
+								{/* LEFT */}
+								<div>
+									{/* JOB TITLE */}
+									<div>Front-End Developer</div>
+									{/* JOB DESCRIPTION */}
+									<div>
+										I create unique and engaging web
+										applications using cutting-edge frontend
+										technologies, ensuring optimal
+										performance and responsive design for
+										enhanced user experience. My work
+										involves not only crafting functional
+										and beautiful interfaces, but also
+										actively collaborating with the team to
+										effectively achieve project goals and
+										continuously improving skills to align
+										with the latest trends in frontend
+										development.
+									</div>
+									{/* JOB DATE */}
+									<div>October 2023 - Present</div>
+									{/* JOB COMPANY */}
+									<div>BAZA TRAINEE UKRAINE</div>
+								</div>
+								{/* CENTER */}
+								<div>
+									{/* LINE */}
+									<div>
+										{/* LINE CIRCLE */}
+										<div></div>
+									</div>
+								</div>
+								{/* RIGHT */}
+								<div></div>
+							</div>
+							{/* EXPERIENCE LIST ITEM*/}
+							<div className='flex justify-between h-48'>
+								{/* LEFT */}
+								<div className='w-1/3 bg-pink-200'>
+									{/* JOB TITLE */}
+									<div className='p-3 font-semibold bg-white rounded-b-lg rounded-s-lg'>
+										Power Unit Engineer
+									</div>
+									{/* JOB DESCRIPTION */}
+									<div className='p-3 text-sm italic'>
+										I was responsible for process control
+										and maintenance of power equipment. My
+										responsibilities included monitoring and
+										ensuring the efficient operation of
+										power systems, participating in the
+										planning and implementation of
+										maintenance processes, as well as
+										troubleshooting and resolving issues to
+										ensure uninterrupted production.
+										Additionally, I actively collaborated
+										with other departments and specialists
+										to ensure the safety and efficiency of
+										equipment operation.
+									</div>
+									{/* JOB DATE */}
+									<div className='p-3 text-sm font-semibold text-pink-400'>
+										July 2002 - February 2022
+									</div>
+									{/* JOB COMPANY */}
+									<div className='p-1 text-sm font-semibold bg-white rounded'>
+										METINVEST
+									</div>
+								</div>
+								{/* CENTER */}
+								<div className='flex justify-center w-1/6'>
+									{/* LINE */}
+									<div className='relative w-1 h-full bg-gray-600 rounded'>
+										{/* LINE CIRCLE */}
+										<div className='absolute w-5 h-5 bg-white rounded-full ring-4 ring-pink-400 -left-2'></div>
+									</div>
+								</div>
+								{/* RIGHT */}
+								<div className='w-1/3 bg-pink-200'></div>
+							</div>
+						</div>
+					</div>
 				</div>
 				{/* SVG CONTAINER */}
-				<div className='hidden'></div>
+				<div className='hidden w-1/3 xl:w-1/2 lg:block'></div>
 			</div>
 		</motion.div>
 	);

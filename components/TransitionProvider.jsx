@@ -1,8 +1,9 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
-import Navbar from './Navbar';
 import { usePathname } from 'next/navigation';
+
+import Navbar from './Navbar';
 
 const TransitionProvider = ({ children }) => {
 	const pathName = usePathname();
@@ -33,10 +34,10 @@ const TransitionProvider = ({ children }) => {
 					initial={{ height: '140vh' }}
 					animate={{ height: 0, transition: { delay: 0.5 } }}
 				/>
-				<div className='h-24 px-[5%] max-w-[1920px] mx-auto'>
+				<div className='h-24 px-[5vw] max-w-[1920px] mx-auto'>
 					<Navbar />
 				</div>
-				<div>
+				<div className="h-[calc(100vh-6rem)] max-w-[1920px] mx-auto">
 					{children}
 				</div>
 			</div>

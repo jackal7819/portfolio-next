@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaLinkedin, FaSquareGithub, FaTelegram } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -99,8 +99,8 @@ const Navbar = () => {
 					<Link
 						key={link.title}
 						href={link.url}
-						className={`rounded-md px-2 py-1 duration-300 hover:text-amber-500 ${
-							pathname === link.url && 'bg-black text-white'
+						className={`rounded-md py-1 duration-300 hover:text-amber-500 ${
+							pathname === link.url && 'bg-black text-white px-2'
 						}`}
 					>
 						<p className='text-2xl font-semibold'>{link.title}</p>

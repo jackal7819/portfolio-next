@@ -12,7 +12,7 @@ const Home = () => {
 			animate={{ y: '0%' }}
 			transition={{ duration: 1 }}
 		>
-			<div className='flex flex-col h-full gap-20 pb-24 lg:flex-row lg:pb-0 px-[5%]'>
+			<div className='flex flex-col h-full gap-20 pb-24 lg:flex-row lg:pb-0 px-[5vw]'>
 				{/* IMAGE CONTAINER */}
 				<div className='relative h-1/2 lg:h-full lg:w-1/2'>
 					<Image
