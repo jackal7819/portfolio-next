@@ -39,7 +39,6 @@ const PortfolioPage = () => {
 									<h1 className='text-3xl md:text-4xl xl:text-5xl'>
 										{item.title}
 									</h1>
-									{/* <div className='relative h-[180px] w-[320px] sm:h-[225px] sm:w-[400px] md:h-[281px] md:w-[500px] lg:h-[351px] lg:w-[625px] 2xl:h-[439px] 2xl:w-[781px]'> */}
 									<div className='relative h-[180px] w-[320px] sm:h-[225px] sm:w-[400px] md:h-[281px] md:w-[500px] lg:h-[351px] lg:w-[625px] xl:h-[50vh] xl:w-[50vw]'>
 										<Image
 											src={item.img}
@@ -54,13 +53,13 @@ const PortfolioPage = () => {
 									<div className='flex items-center justify-start w-full gap-4'>
 										<Link
 											href={item.code}
-											className='w-32 p-3 font-semibold text-center text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500'
+											className='w-32 p-3 font-semibold text-center text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500 active:bg-amber-400'
 										>
 											Github
 										</Link>
 										<Link
 											href={item.link}
-											className='w-32 p-3 font-semibold text-center duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500'
+											className='w-32 p-3 font-semibold text-center duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500 active:bg-amber-400'
 										>
 											See Demo
 										</Link>
