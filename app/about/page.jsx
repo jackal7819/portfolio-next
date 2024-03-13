@@ -13,9 +13,6 @@ const AboutPage = () => {
 	const { scrollYProgress } = useScroll({
 		container: containerRef,
 	});
-	// const skillRef = useRef();
-	// const isSkillRefInView = useInView(skillRef);
-	// console.log('about: ', isSkillRefInView);
 	return (
 		<motion.div
 			className='h-full'
