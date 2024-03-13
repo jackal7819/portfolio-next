@@ -3,7 +3,7 @@ export const data = [
 		id: 1,
 		color: 'from-cyan-500 to-blue-500',
 		title: 'React Commerce',
-		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.',
+		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat.',
 		img: '/burger-app.jpg',
 		code: 'https://github.com',
 		link: 'https://lama.dev',

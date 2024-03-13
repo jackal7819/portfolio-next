@@ -35,30 +35,32 @@ const PortfolioPage = () => {
 								key={item.id}
 								className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
 							>
-								<div className='flex flex-col gap-8 text-white'>
-									<h1 className='text-4xl xl:text-8xl sm:text-5xl md:text-6xl lg:text-7xl'>
+								<div className='flex flex-col items-start justify-center gap-8 text-white'>
+									<h1 className='text-3xl md:text-4xl xl:text-5xl'>
 										{item.title}
 									</h1>
-									<div className='relative'>
+									{/* <div className='relative h-[180px] w-[320px] sm:h-[225px] sm:w-[400px] md:h-[281px] md:w-[500px] lg:h-[351px] lg:w-[625px] 2xl:h-[439px] 2xl:w-[781px]'> */}
+									<div className='relative h-[180px] w-[320px] sm:h-[225px] sm:w-[400px] md:h-[281px] md:w-[500px] lg:h-[351px] lg:w-[625px] xl:h-[50vh] xl:w-[50vw]'>
 										<Image
 											src={item.img}
 											alt={item.title}
-											width={500}
-											height={500}
+											fill
 										/>
 									</div>
-									<p>{item.desc}</p>
+									<p className='w-[320px] sm:w-[400px] md:w-[500px] lg:w-[625px] xl:w-[50vw] lg:text-lg'>
+										{item.desc}
+									</p>
 									{/* BUTTONS */}
-									<div className='flex items-center justify-center w-full gap-4 lg:justify-start'>
+									<div className='flex items-center justify-start w-full gap-4'>
 										<Link
 											href={item.code}
-											className='p-3 font-semibold text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500'
+											className='w-32 p-3 font-semibold text-center text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500'
 										>
 											Github
 										</Link>
 										<Link
 											href={item.link}
-											className='p-3 font-semibold duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500'
+											className='w-32 p-3 font-semibold text-center duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500'
 										>
 											See Demo
 										</Link>
@@ -70,8 +72,8 @@ const PortfolioPage = () => {
 				</div>
 			</div>
 			{/* CIRCLE */}
-			<div className='flex flex-col items-center justify-center h-screen gap-16 text-center p-[5%] bg-gradient-to-b from-pink-100 to-sky-200'>
-				<h1 className='text-4xl xl:text-8xl sm:text-5xl md:text-6xl lg:text-7xl'>
+			<div className='flex flex-col items-center justify-center h-screen gap-5 text-center p-[5%] bg-gradient-to-b from-pink-100 to-sky-200'>
+				<h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
 					Do you have a project?
 				</h1>
 				<div className='relative'>

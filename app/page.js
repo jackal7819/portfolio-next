@@ -41,13 +41,13 @@ const Home = () => {
 					<div className='flex items-center justify-center w-full gap-4 lg:justify-start'>
 						<Link
 							href='/portfolio'
-							className='p-3 font-semibold text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500'
+							className='w-40 p-3 font-semibold text-center text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500'
 						>
 							View My Work
 						</Link>
 						<Link
 							href='/contact'
-							className='p-3 font-semibold duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500'
+							className='w-40 p-3 font-semibold text-center duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500'
 						>
 							Contact Me
 						</Link>
