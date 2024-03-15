@@ -12,7 +12,7 @@ const PortfolioPage = () => {
 	const { scrollYProgress } = useScroll({
 		target: ref,
 	});
-	const x = useTransform(scrollYProgress, [0.23, 0.81], ['0%', '-90.9%']);
+	const x = useTransform(scrollYProgress, [0.23, 0.81], ['0%', '-88.9%']);
 
 	return (
 		<motion.div
@@ -33,7 +33,7 @@ const PortfolioPage = () => {
 						{data.map((item) => (
 							<div
 								key={item.id}
-								className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+								className={`h-screen w-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 via-purple-400 to-blue-400`}
 							>
 								<div className='flex flex-col items-start justify-center gap-8 text-white'>
 									<h1 className='text-3xl md:text-4xl xl:text-5xl'>
