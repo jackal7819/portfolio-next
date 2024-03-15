@@ -51,18 +51,22 @@ const PortfolioPage = () => {
 									</p>
 									{/* BUTTONS */}
 									<div className='flex items-center justify-start w-full gap-4'>
-										<Link
+										<a
 											href={item.code}
+											target='_blank'
+											rel='noopener noreferrer'
 											className='w-32 p-3 font-semibold text-center text-white duration-300 bg-black border-4 border-black rounded-lg hover:bg-amber-500 hover:border-amber-500 active:bg-amber-400'
 										>
 											Github
-										</Link>
-										<Link
+										</a>
+										<a
 											href={item.link}
+											target='_blank'
+											rel='noopener noreferrer'
 											className='w-32 p-3 font-semibold text-center duration-300 border-4 border-black rounded-lg hover:bg-amber-500 hover:text-white hover:border-amber-500 active:bg-amber-400'
 										>
 											See Demo
-										</Link>
+										</a>
 									</div>
 								</div>
 							</div>
