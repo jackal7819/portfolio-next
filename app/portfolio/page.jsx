@@ -12,7 +12,7 @@ const PortfolioPage = () => {
 	const { scrollYProgress } = useScroll({
 		target: ref,
 	});
-	const x = useTransform(scrollYProgress, [0.23, 0.81], ['0%', '-88.9%']);
+	const x = useTransform(scrollYProgress, [0.23, 0.83], ['0%', '-90.9%']);
 
 	return (
 		<motion.div
@@ -28,25 +28,25 @@ const PortfolioPage = () => {
 					<ScrollSvg />
 				</div>
 				{/* PROJECTS */}
-				<div className='sticky top-0 flex items-center h-screen gap-4 overflow-hidden'>
+				<div className='sticky top-0 flex items-center h-screen overflow-hidden'>
 					<motion.div style={{ x }} className='flex'>
 						{data.map((item) => (
 							<div
 								key={item.id}
-								className={`h-screen w-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 via-purple-400 to-blue-400`}
+								className={`h-screen w-screen flex items-center justify-center bg-gradient-to-b from-indigo-400 via-purple-400 to-blue-400 -mr-[1px]`}
 							>
 								<div className='flex flex-col items-start justify-center gap-8 text-white'>
 									<h1 className='text-3xl md:text-4xl xl:text-5xl'>
 										{item.title}
 									</h1>
-									<div className='relative h-[180px] w-[320px] sm:h-[225px] sm:w-[400px] md:h-[281px] md:w-[500px] lg:h-[351px] lg:w-[625px] xl:h-[50vh] xl:w-[50vw]'>
+									<div className='relative h-[180px] w-[320px] sm:h-[225px] sm:w-[400px] md:h-[281px] md:w-[500px] lg:h-[351px] lg:w-[625px] xl:h-[50vh] xl:w-[45vw]'>
 										<Image
 											src={item.img}
 											alt={item.title}
 											fill
 										/>
 									</div>
-									<p className='w-[320px] sm:w-[400px] md:w-[500px] lg:w-[625px] xl:w-[50vw] lg:text-lg'>
+									<p className='w-[320px] sm:w-[400px] md:w-[500px] lg:w-[625px] xl:w-[45vw] lg:text-lg'>
 										{item.desc}
 									</p>
 									{/* BUTTONS */}
@@ -75,7 +75,7 @@ const PortfolioPage = () => {
 				</div>
 			</div>
 			{/* CIRCLE */}
-			<div className='flex flex-col items-center justify-center h-screen gap-5 text-center p-[5%] bg-gradient-to-b from-pink-100 to-sky-200'>
+			<div className='flex flex-col items-center justify-center gap-5 h-screen text-center p-[5%] bg-gradient-to-t from-white to-sky-200'>
 				<h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
 					Do you have a project?
 				</h1>
