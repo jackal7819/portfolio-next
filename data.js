@@ -14,7 +14,7 @@ export const data = [
 		title: 'Galaxy Store',
 		desc: 'Galaxy Store - the shop where you can find the finest furniture for your comfort and style. Technologies Used - JavaScript, React, React Router, React Toastify, Tailwind CSS, DaisyUI, Tanstack Query, Redux Toolkit, Vite.',
 		img: '/react-galaxy.jpg',
-		code: 'https://github.com/jackal7819/Galaxy-Store',
+		code: 'https://github.com/jackal7819/galaxy-store',
 		link: 'https://galaxy-store.onrender.com/',
 	},
 	{
@@ -23,7 +23,7 @@ export const data = [
 		title: 'Liquid Lab',
 		desc: 'LiquidLab is a SPA designed to introduce users to a delightful collection of cocktail recipes. Technologies Used - JavaScript, React, React Router, React Toastify, Styled-Components, Tanstack Query, Vite, TheCocktailDB API.',
 		img: '/react-liquid.jpg',
-		code: 'https://github.com/jackal7819/Liquid-Lab',
+		code: 'https://github.com/jackal7819/liquid-lab',
 		link: 'https://liquid-lab.onrender.com/',
 	},
 	{
@@ -32,7 +32,7 @@ export const data = [
 		title: 'Gaming Galaxy',
 		desc: 'This is a Gaming Galaxy - the best store of Nintendo games. Technologies Used - TypeScript, React, React Router, SCSS, Axios, Redux Toolkit, Webpack.',
 		img: '/react-nintendo.jpg',
-		code: 'https://github.com/jackal7819/Nintendo-Store',
+		code: 'https://github.com/jackal7819/nintendo-store',
 		link: 'https://nintendo-store.onrender.com/',
 	},
 	{
@@ -41,7 +41,7 @@ export const data = [
 		title: 'Color Generator',
 		desc: 'The Color Generator is a web application that allows you to generate and manage color codes. It provides a user-friendly interface for creating, previewing, and copying color values. Technologies Used - JavaScript, React, React Router, Styled-Components, Tanstack Query, Vite.',
 		img: '/react-color.jpg',
-		code: 'https://github.com/jackal7819/Color-Generator',
+		code: 'https://github.com/jackal7819/color-generator',
 		link: 'https://color-generator-2a9h.onrender.com/',
 	},
 	{
@@ -50,7 +50,7 @@ export const data = [
 		title: 'Metaphor Magic',
 		desc: `Metaphor Magic is a full-stack blog application that allows users to create, read, update, and delete blog articles. Technologies Used - JavaScript, React, React Router, React Markdown, MUI, Axios, Redux Toolkit, Webpack, Node.js, Express.js, MongoDB, Mongoose.`,
 		img: '/react-blog.jpg',
-		code: 'https://github.com/jackal7819/Blog',
+		code: 'https://github.com/jackal7819/blog',
 		link: 'https://blog-mauve-theta-33.vercel.app/',
 	},
 	{
@@ -59,7 +59,7 @@ export const data = [
 		title: 'CINE World',
 		desc: `CINE World is a movie database website built using the TMDB API. It allows users to view information about movies, ratings, what's currently on top. Technologies Used - TypeScript, Next.js, React, Tailwind CSS, TMDB API.`,
 		img: '/next-cine.jpg',
-		code: 'https://github.com/jackal7819/IMDB-Clone',
+		code: 'https://github.com/jackal7819/cine-world',
 		link: 'https://imdb-clone-seven-roan.vercel.app/',
 	},
 	{
