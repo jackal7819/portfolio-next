@@ -92,7 +92,7 @@ export const data = [
 	{
 		id: 11,
 		color: 'from-cyan-500 to-blue-500',
-		title: 'Liquid Lab',
+		title: 'Golden Dragon',
 		desc: 'Sushi and rolls delivery application for the Golden Dragon restaurant. Technologies Used - JavaScript, CSS, React, Hooks - useState, useEffect, useContext, useRef, useReducer, Firebase.',
 		img: '/react-dragon.png',
 		code: 'https://github.com/jackal7819/golden-dragon',
