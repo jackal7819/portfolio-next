@@ -47,11 +47,11 @@ export const data = [
 	{
 		id: 6,
 		color: 'from-cyan-500 to-blue-500',
-		title: 'Metaphor Magic',
-		desc: `Metaphor Magic is a full-stack blog application that allows users to create, read, update, and delete blog articles. Technologies Used - JavaScript, React, React Router, React Markdown, MUI, Axios, Redux Toolkit, Webpack, Node.js, Express.js, MongoDB, Mongoose.`,
-		img: '/react-blog.jpg',
-		code: 'https://github.com/jackal7819/blog',
-		link: 'https://blog-mauve-theta-33.vercel.app/',
+		title: 'GitHub Persona',
+		desc: `GitHub Persona is a web application that provides information about GitHub users. Users can log in using their GitHub credentials via the login page, view profile data, repositories, programming languages, followers, and starred repositories.`,
+		img: '/react-persona.png',
+		code: 'https://github.com/jackal7819/github-persona',
+		link: 'https://github-persona.onrender.com/',
 	},
 	{
 		id: 7,
